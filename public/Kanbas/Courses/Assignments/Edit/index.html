@@ -1,53 +1,128 @@
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <label><select>
-          <option>SpeedGrader</option>
-        </select></label>
-        <hr>
-        <h3>Assignment Name</h3>
-        <label><input type="text" placeholder="A1 - ENV + HTML"></label>
-        <br/> <br/>
-        <textarea cols="20" rows="2"
-                  placeholder="This is the assignment description."
-                  title="description">
-        </textarea><br/> <br/>
-        <label for="Points">Points</label><br/>
-        <input id="Points" placeholder="100"/> <br/> <br/>
-        <label for="Assignment Group">Assignment Group</label><br/>
-        <select id="Assignment Group">
-          <option>ASSIGNMENTS</option>
-        </select> <br/> <br/>
-        <label for="Display Grade as">Display Grade as</label><br/>
-        <select id="Display Grade as">
-          <option>Percentage</option>
-        </select><br/> <br/>
-        <label for="Submission Type">Submission Type</label><br/>
-        <select id="Submission Type">
-          <option>Online</option>
-        </select><br/><br/>
-        <Label>Online Entry Options</Label><br/>
-        <input type="checkbox" value="Text Entry" name="Online Entry Options" id="check-TextEntry">
-        <label for="check-TextEntry">Text Entry</label><br/>
-        <input type="checkbox" value="Website URL" name="Online Entry Options" id="Website URL">
-        <label for="Website URL">Website URL</label><br/>
-        <input type="checkbox" value="Media Recording" name="Online Entry Options" id="Media Recording">
-        <label for="Media Recording">Media Recording</label><br/>
-        <input type="checkbox" value="Student Annotation" name="Online Entry Options" id="Student Annotation">
-        <label for="Student Annotation">Student Annotation</label><br/>
-        <input type="checkbox" value="File Upload" name="Online Entry Options" id="File Upload">
-        <label for="File Upload">File Upload</label><br/><br/>
-        <label>Assign</label><br/>
-        <label>Assign to<br/>
-          <input type="text" id="assign to" placeholder="Everyone"><br/><br/></label>
-        <label>Due<br/>
-          <input type="date" id="due" value="2021-01-01"></label><br/><br/>
-        <label>Until<br/>
-          <input type="date" id="until" value="2021-01-01"></label><br/><br/>
-        <button type="button">Cancel</button>
-        <button type="button">Save</button>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<html>
+<head>
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css"/>
+  <link rel="stylesheet" href="/Kanbas/Courses/Assignments/Edit/index.css"/>
+</head>
+<body>
+<div class="wd-assignment-edit">
+
+  <div class="mb-2 float-end">
+    <button class="btn text-success"><i class="fa fa-check-circle text-success pe-1"></i>Published</button>
+    <button class="btn wd-btn"><i class="fa fa-ellipsis-v"></i></button>
+  </div>
+
+  <div class="mb-1 pt-5">
+    <div class="wd-horizontal-line"></div>
+  </div>
+
+  <div class="mb-2">
+    <div class="col-12">
+      <label for="name" class="form-label">Assignment Name</label>
+      <input type="text" class="form-control" id="name" placeholder="A1 - ENV + HTML">
+    </div>
+  </div>
+
+  <div class="mb-3">
+    <label for="textarea1" class="form-label"></label>
+    <textarea class="form-control" id="textarea1" rows="4">This area describes how to install the development environment.</textarea>
+  </div>
+
+  <div class="row d-flex align-items-center justify-content-center mb-3">
+    <div class="col-2">
+      <label for="points" class="form-label">Points</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" id="points" placeholder="100">
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mb-3">
+    <div class="col-2">
+      <label for="group" class="form-label">Assignment Group</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" id="group">
+        <option selected>ASSIGNMENTS</option>
+      </select>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mb-3">
+    <div class="col-2">
+      <label for="display_grade" class="form-label">Display Grade as</label>
+    </div>
+    <div class="col-8">
+      <select class="form-select" id="display_grade">
+        <option selected>Percentage</option>
+      </select>
+    </div>
+  </div>
+  <div class="row d-flex align-items-center justify-content-center mb-3">
+    <div class="col-6">
+      <input class="form-check-input"
+             type="checkbox" id="r6"/>
+      <label class="form-check-label" for="r6">
+        Do not count this assignment toward final grade</label>
+    </div>
+  </div>
+  <div class="row d-flex justify-content-center mb-3">
+    <div class="col-2">
+      <label class="form-label">Assign</label>
+    </div>
+    <div class="col-8">
+      <div class="container wd-rounded-corners-top" style="border: 1px solid lightgray">
+        <div class="mb-2 mt-3">
+          <label for="assign-to" class="form-label">Assign to</label>
+          <input type="text" class="form-control" id="assign-to" placeholder="100">
+        </div>
+        <div class="mb-2 mt-3">
+          <label for="due" class="form-label">Due</label>
+          <input type="datetime-local" class="form-control" id="due" value="2023-09-18T11:59">
+        </div>
+        <div class="mb-2 mt-3">
+          <div class="row">
+            <div class="col">
+              <label for="avaliable-from" class="form-label">Avaliable from</label>
+              <input type="datetime-local" class="form-control" id="avaliable-from" value="2023-09-06T12:00">
+            </div>
+            <div class="col">
+              <label for="until" class="form-label">Until</label>
+              <input type="datetime-local" class="form-control" id="until">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="mb-2" style="border: 1px solid lightgray; border-top: none">
+        <button class="btn-secondary w-100 border-0" style="padding: 5px"><i class="fa fa-plus pe-2"></i>Add</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-1 pt-4">
+    <div class="wd-horizontal-line"></div>
+  </div>
+
+  <div class="mb-1">
+    <div class="d-flex">
+      <div class="flex-fill">
+        <input class="form-check-input" type="checkbox" id="notify"/>
+        <label class="form-check-label" for="notify"> Notify users that this content has changed</label>
+      </div>
+      <div class="float-end">
+        <button class="btn border-0" style="background-color: lightgray">Cancel</button>
+        <button class="btn btn-danger border-0">Save</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="mb-1 pt-2">
+    <div class="wd-horizontal-line"></div>
+  </div>
+
+</div>
+</body>
+</html>

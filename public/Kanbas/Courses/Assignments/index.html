@@ -1,95 +1,259 @@
-<table>
-  <tbody>
-    <tr>
-      <td>
-        <label><input type="text" placeholder="Search for Assignments"></label>
-        <button type="button">Group</button>
-        <button type="button">Assignments</button>
-        <label><select>
-          <option>Edit Assignment Dates</option>
-        </select></label>
-        <hr>
-        <h3>ASSIGNMENTS 40% of Total
-          <label><select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-          </select></label></h3>
-        <ul>
-          <li><a href="Edit/screen.html">A1 - ENV + HTML</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="Edit/screen.html">A2 - CSS + BOOTSTRAP</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="Edit/screen.html">A3 - JS + REACT</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="Edit/screen.html">A4 STATE + REDUX</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="Edit/screen.html">A5 - NODE + SESSION</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="Edit/screen.html">A6 MONGO + MONGOOSE</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-        </ul>
-        <h3>QUIZZES 10% of Total
-          <label><select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-          </select></label></h3>
-        <ul>
-          <li><a href="">Q1 - HTML</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="">Q2 - CSS</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="">Q3 - JS,ES6</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="">Q4 NODE</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="">Q5 MONGO</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-        </ul>
-        <h3>EXAMS 20% of Total
-          <label><select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-          </select></label></h3>
-        <ul>
-          <li><a href="">Midterm</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-          <li><a href="">Final</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-        </ul>
-        <h3>PROJECTS 30% of Total
-          <label><select>
-            <option>Edit</option>
-            <option>Speed Grader</option>
-            <option>Duplicate</option>
-            <option>Delete</option>
-            <option>Move To...</option>
-            <option>Send To...</option>
-            <option>Copy To...</option>
-            <option>Share to Commons</option>
-          </select></label></h3>
-        <ul>
-          <li><a href="">Projects</a></li>
-          <a href="#"> Multiple Modules</a> | Not available yet
-        </ul>
-      </td>
-    </tr>
-  </tbody>
-</table>
+<html>
+<head>
+  <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+  <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="/Kanbas/styles.css" />
+  <link rel="stylesheet" href="/Kanbas/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Home/index.css" />
+  <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css"/>
+</head>
+<body>
+
+  <div class="row pt-2">
+    <div class="col-12">
+      <div class="d-flex justify-content-between">
+    <div class="w-25 ps-2">
+      <label for="search">
+        <input type="text"
+               class="form-control"
+               id="search"
+               placeholder="Search for Assignment"></label>
+    </div>
+    <div class="float-end pe-2">
+      <button class="btn wd-btn"><i class="fa fa-plus"></i>Group</button>
+      <button class="btn wd-btn-red"><i class="fa fa-plus"></i>Assignment</button>
+      <button class="btn wd-btn"><i class="fa fa-ellipsis-v"></i></button>
+    </div>
+    </div>
+    </div>
+    <div class="col-12 pt-3">
+      <div class="wd-horizontal-line"></div>
+    </div>
+    <div class="col-12">
+      <div class="wd-assignments list-group">
+
+        <div class="list-group-item wd-title">
+            <i class="fa fa-ellipsis-v"></i>
+            <i class="fa fa-caret-down ps-2"></i>
+            <label class="ps-1">Assignments</label>
+          <div class="float-end pe-3">
+            <label>
+            <input type="text" class="form-control rounded wd-input" value="40% of total"></label>
+            <i class="fa fa-plus fa-lg pe-2"></i>
+            <i class="fa fa-ellipsis-v fa-lg"></i>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A1 SETUP</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 0 - SETUP - Week starting on Monday September 5th</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A2 HTML</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 1 - HTML - Week starting on Monday September 12th</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A3 CSS</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 2 - CSS - Week starting on Monday September 19th</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A4 BOOTSTRAP</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 3 - BOOTSTRAP - Week starting on Monday September 26th</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A5 JAVASCRIPT</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 4 - JAVASCRIPT - Week starting on Monday October 3rd</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="list-group-item wd-homework">
+          <div class="row d-flex align-items-center justify-content-center">
+            <div class="wd-col-left">
+              <i class="fa fa-ellipsis-v"></i>
+              <i class="fa fa-file ps-3 pe-2 text-success"></i>
+            </div>
+            <div class="col">
+              <a href="" class="text-dark">A6 REACT</a>
+              <br/>
+              <label class="wd-label-color-lightgray">Week 5 - REACT - Week starting on Monday October 10th</label>
+            </div>
+            <div class="wd-col-right">
+              <i class="fa fa-check-circle text-success fa-lg pt-1"></i>
+              <i class="fa fa-ellipsis-v fa-lg float-end pe-3 pt-1"></i>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
+
+
+<!--<table>-->
+<!--  <tbody>-->
+<!--    <tr>-->
+<!--      <td>-->
+<!--        <label><input type="text" placeholder="Search for Assignments"></label>-->
+<!--        <button type="button">Group</button>-->
+<!--        <button type="button">Assignments</button>-->
+<!--        <label><select>-->
+<!--          <option>Edit Assignment Dates</option>-->
+<!--        </select></label>-->
+<!--        <hr>-->
+<!--        <h3>ASSIGNMENTS 40% of Total-->
+<!--          <label><select>-->
+<!--            <option>Edit</option>-->
+<!--            <option>Speed Grader</option>-->
+<!--            <option>Duplicate</option>-->
+<!--            <option>Delete</option>-->
+<!--            <option>Move To...</option>-->
+<!--            <option>Send To...</option>-->
+<!--            <option>Copy To...</option>-->
+<!--            <option>Share to Commons</option>-->
+<!--          </select></label></h3>-->
+<!--        <ul>-->
+<!--          <li><a href="Edit/screen.html">A1 - ENV + HTML</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="Edit/screen.html">A2 - CSS + BOOTSTRAP</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="Edit/screen.html">A3 - JS + REACT</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="Edit/screen.html">A4 STATE + REDUX</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="Edit/screen.html">A5 - NODE + SESSION</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="Edit/screen.html">A6 MONGO + MONGOOSE</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--        </ul>-->
+<!--        <h3>QUIZZES 10% of Total-->
+<!--          <label><select>-->
+<!--            <option>Edit</option>-->
+<!--            <option>Speed Grader</option>-->
+<!--            <option>Duplicate</option>-->
+<!--            <option>Delete</option>-->
+<!--            <option>Move To...</option>-->
+<!--            <option>Send To...</option>-->
+<!--            <option>Copy To...</option>-->
+<!--            <option>Share to Commons</option>-->
+<!--          </select></label></h3>-->
+<!--        <ul>-->
+<!--          <li><a href="">Q1 - HTML</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="">Q2 - CSS</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="">Q3 - JS,ES6</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="">Q4 NODE</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="">Q5 MONGO</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--        </ul>-->
+<!--        <h3>EXAMS 20% of Total-->
+<!--          <label><select>-->
+<!--            <option>Edit</option>-->
+<!--            <option>Speed Grader</option>-->
+<!--            <option>Duplicate</option>-->
+<!--            <option>Delete</option>-->
+<!--            <option>Move To...</option>-->
+<!--            <option>Send To...</option>-->
+<!--            <option>Copy To...</option>-->
+<!--            <option>Share to Commons</option>-->
+<!--          </select></label></h3>-->
+<!--        <ul>-->
+<!--          <li><a href="">Midterm</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--          <li><a href="">Final</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--        </ul>-->
+<!--        <h3>PROJECTS 30% of Total-->
+<!--          <label><select>-->
+<!--            <option>Edit</option>-->
+<!--            <option>Speed Grader</option>-->
+<!--            <option>Duplicate</option>-->
+<!--            <option>Delete</option>-->
+<!--            <option>Move To...</option>-->
+<!--            <option>Send To...</option>-->
+<!--            <option>Copy To...</option>-->
+<!--            <option>Share to Commons</option>-->
+<!--          </select></label></h3>-->
+<!--        <ul>-->
+<!--          <li><a href="">Projects</a></li>-->
+<!--          <a href="#"> Multiple Modules</a> | Not available yet-->
+<!--        </ul>-->
+<!--      </td>-->
+<!--    </tr>-->
+<!--  </tbody>-->
+<!--</table>-->

@@ -1,0 +1,46 @@
+.wd-assignments,
+.wd-assignments * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-assignments {
+  margin: 5px;
+}
+
+.wd-title {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  padding: 10px;
+}
+
+.wd-homework {
+  background-color: white;
+  border: 1px solid gray !important;
+  border-left: 2px solid green !important;
+  padding: 10px;
+}
+
+.wd-col-left {
+  width: 4%;
+  float: left
+}
+
+.wd-col-right {
+  width: 5%;
+  float: right
+}
+
+.wd-label-color-lightgray {
+  color: lightgray;
+  font-size: 12px;
+}
+
+.wd-input {
+  background-color: lightgray;
+  border: 1px solid;
+  width: 90px;
+}
+

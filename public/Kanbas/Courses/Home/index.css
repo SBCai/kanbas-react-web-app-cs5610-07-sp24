@@ -1,0 +1,36 @@
+.wd-container {
+  padding-left: 10px
+}
+
+.wd-btn-gray {
+  background-color: lightgray;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.wd-btn-lightgreen {
+  background-color: lightgreen;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.wd-span-margin {
+  margin: 0px
+}
+
+a {
+  text-decoration: none;
+  color: red;
+}
+
+.wd-grid-col-left-sidebar {
+   width: 5.5%;
+   float: left;
+}
+
+.wd-grid-col-right {
+   width: 94.5%;
+   float: left;
+}
+
+.wd-header {
+  background-color: black
+}

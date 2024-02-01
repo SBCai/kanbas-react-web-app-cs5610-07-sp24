@@ -1,0 +1,12 @@
+.wd-grade {
+  margin: 2px;
+  padding: 5px;
+}
+
+.wd-grade > div > div{
+  margin-top: 10px;
+}
+
+th, td {
+ text-align: center;
+}
