@@ -1,0 +1,17 @@
+.wd-horizontal-line {
+  width: 100%;
+  border-top: 2px solid gray;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.wd-col-10 {
+  max-width: 12% !important;
+  float: left !important;
+}
+
+.wd-col-90 {
+  max-width: 88% !important;
+}
+
+.breadcrumb-item+.breadcrumb-item::before{content:var(--bs-breadcrumb-divider,">") !important ;}

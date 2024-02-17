@@ -1,0 +1,45 @@
+.wd-sidebar {
+  padding-left: 10px
+}
+
+.wd-btn-gray {
+  background-color: lightgray !important;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.wd-btn-lightgreen {
+  background-color: lightgreen !important;
+  border-radius: 2px 2px 2px 2px;
+}
+
+.wd-span-margin {
+  margin: 0px
+}
+
+.wd-grid-col-left-sidebar {
+   width: 5.5%;
+   float: left;
+}
+
+.wd-grid-col-right {
+   width: 94.5%;
+   float: left;
+}
+
+.wd-header {
+  background-color: black
+}
+
+.wd-sidebar a {
+  font-size: 12px;
+  text-decoration: none;
+  color: red !important;
+}
+
+.wd-sidebar label {
+  font-size: 12px;
+}
+
+.wd-sidebar i {
+  margin-right: 5px;
+}
