@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, {useEffect, useState } from "react";
 import "../../../libs/bootstrap/bootstrap.min.css"
 import "../../styles.css";
 import "./index.css";
@@ -11,11 +11,41 @@ import {
   deleteModule,
   updateModule,
   setModule,
+  setModules,
 } from "./modulesReducer";
+import * as client from "./client";
 import { KanbasState } from "../../store";
 
 function ModuleList() {
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
   const { courseId } = useParams();
+
+  useEffect(() => {
+    client.findModulesForCourse(courseId)
+      .then((modules) =>
+        dispatch(setModules(modules))
+    );
+  }, [courseId]);
+
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+
     const moduleList = useSelector((state: KanbasState) =>
       state.modulesReducer.modules);
     const module = useSelector((state: KanbasState) =>
@@ -49,8 +79,8 @@ function ModuleList() {
             onChange={(e) => dispatch(setModule({
               ...module, description: e.target.value }))}
           />
-          <button className="mt-1 btn btn-success" onClick={() => dispatch(addModule({ ...module, course: courseId }))}>Add</button>
-          <button className="mt-1 ms-1 btn btn-success" onClick={() => dispatch(updateModule(module))}>
+          <button className="mt-1 btn btn-success" onClick={handleAddModule}>Add</button>
+          <button className="mt-1 ms-1 btn btn-success" onClick={handleUpdateModule}>
                   Update
           </button>
 
@@ -70,7 +100,7 @@ function ModuleList() {
               </button>
 
               <button className="ms-2 btn btn-danger"
-                onClick={() => dispatch(deleteModule(module._id))}>
+                onClick={() => handleDeleteModule(module._id)}>
                 Delete
               </button>
               <span className="float-end">

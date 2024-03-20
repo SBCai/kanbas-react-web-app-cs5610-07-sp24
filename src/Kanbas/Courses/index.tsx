@@ -10,11 +10,25 @@ import Grades from "./Grades";
 import "../styles.css";
 import "./index.css";
 import {CoursesType} from "../Database";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
-function Courses({ courses } : {courses: CoursesType}) {
+function Courses() {
   const { courseId } = useParams();
+
+  const COURSES_API = "http://localhost:4000/api/courses";
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(
+      `${COURSES_API}/${courseId}`
+    );
+    setCourse(response.data);
+  };
+  useEffect(() => {
+    findCourseById(courseId);
+  }, [courseId]);
+
   const { pathname } = useLocation();
-  const course = courses.find((course) => course._id === courseId);
   const currentPath = pathname.split('/').pop()?.replace("%20", ' ')
   return (
     <div className="row">

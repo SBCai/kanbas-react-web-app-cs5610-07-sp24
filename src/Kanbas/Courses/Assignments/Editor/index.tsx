@@ -5,6 +5,7 @@ import "../../../styles.css";
 import {addAssignment, removeAssignment, updateAssignment, setAssignment} from ".././assignmentsReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { KanbasState, assignmentType } from "../../../store";
+import * as service from "../service";
 
 function AssignmentEditor() {
   const dispatch = useDispatch();
@@ -15,9 +16,12 @@ function AssignmentEditor() {
   const navigate = useNavigate();
   const handleSave = () => {
     if (assignmentList.find((a: assignmentType) => a._id === assignment._id)) {
+      const status = service.updateAssignment(assignment);
       dispatch(updateAssignment(assignment));
     } else {
-      dispatch(addAssignment(assignment));
+      service.createAssignment(courseId, assignment).then((assignment) => {
+        dispatch(addAssignment(assignment));
+      });
     }
     navigate(`/Kanbas/Courses/${courseId}/Assignments`);
   };
